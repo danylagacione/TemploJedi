@@ -1,4 +1,3 @@
-
 import random
 
 class BlackJack:
@@ -27,18 +26,12 @@ class BlackJack:
     def embaralhar(self):
        for i in range(len(self.nome_jogador)):
            virar_carta = input('deseja virar carta? (1-Yes / 0-No):')
-           try:
 
-               while (virar_carta == '1'):
-                   escolha = random.choice(self.valores_cartas)
-                   self.nome_jogador[i]['total pontos'] = self.nome_jogador[i]['total pontos'] + escolha["valor"]
-                   print(self.nome_jogador[i]['total pontos'])
-                   virar_carta = input('Jogador ' + self.nome_jogador[i]['nome'] + ' deseja virar carta? (1-Yes / 0-No):')
-
-           except #erro:
-               print('Insira uma opção válida !')
-
-
+           while (virar_carta == '1'):
+               escolha = random.choice(self.valores_cartas)
+               self.nome_jogador[i]['total pontos'] = self.nome_jogador[i]['total pontos'] + escolha["valor"]
+               print(self.nome_jogador[i]['total pontos'])
+               virar_carta = input('Jogador ' + self.nome_jogador[i]['nome'] + ' deseja virar carta? (1-Yes / 0-No):')
 
 
 
@@ -50,10 +43,3 @@ bk = BlackJack()
 bk.numero_jogadores()
 bk.embaralhar()
 
-
-
-
-
-# selecionar o números de jogadores, e  pedir o nome deles
-# primeiro você embaralha as cartas e depois seleciona se o joagador quer continuar jogando
-#
